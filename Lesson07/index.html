@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            color: white;
+            text-transform: uppercase;
+            background-color: #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <dic class="content"></dic>
+    
+    <script>
+        const content = document.querySelector('.content');
+
+        const h1El = document.createElement('h1');
+        h1El.textContent = "h1 element";
+        h1El.setAttribute("class", 'heading');
+
+        const imgEl = document.createElement('img');
+        imgEl.src = 'photo.png';
+        imgEl.setAttribute('alt', 'Фото');
+
+        content.appendChild(h1El);
+        content.appendChild(imgEl);
+
+    </script>
+</body>
+</html>

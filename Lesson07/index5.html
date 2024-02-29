@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <p>1 paragraph</p>
+        <p>2 paragraph</p>
+        <p>3 paragraph</p>
+    </div>
+
+    <script>
+        const divElement = document.querySelector('.content');
+        console.log(divElement.childNodes.length);
+        console.log(divElement.children.length);
+
+        Array.from(divElement.childNodes).forEach(childNodes => console.log('childNodes "%s" type "%d"', 
+            childNodes.nodeName, childNodes.nodeType));
+
+        console.log(divElement.children);
+        [...divElement.children].forEach(child => console.log('child "%s" type "%d"', child.nodeName, child.nodeType));
+
+    </script>
+</body>
+</html>
