@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- <button class="button">Buy 1</button> -->
+    <!-- <button class="button">Buy 2</button>
+    <button class="button">Buy 3</button> -->
+<!-- 
+    <ul class="menu">
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+    </ul>
+
+    <a href="yandex.ru" class="link">yandex</a>
+
+    <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem doloremque facere perspiciatis?
+        Totam nihil eligendi sunt? Fugit, perspiciatis at aut nobis aperiam ut rem vero vitae! Quibusdam incidunt error
+        facere itaque, a aliquid sunt minima ullam enim ipsam eaque odio molestias veritatis adipisci aperiam numquam
+        corporis debitis temporibus eligendi saepe placeat quae. Veniam unde porro, accusantium explicabo ipsa quae
+        consequuntur corrupti minima ab itaque, delectus quasi aut similique. Laudantium aliquid architecto, provident
+        placeat obcaecati ut saepe ducimus nesciunt sit molestiae odit ullam nulla qui praesentium tempore. Nostrum rem
+        ut architecto, consectetur veritatis iste modi nam voluptatum voluptas corporis nesciunt eligendi.</p>
+
+        <input type="text"> -->
+
+        <form action="#">
+            <div class="error"></div>
+            <input type="text" class="input">
+            <button type="submit">Go</button>
+        </form>
+    <script>
+        // let count = 0;
+        // const btnEl = document.querySelector(".button");
+
+        // const click = function () {
+        //     count++;
+        //     console.log("Count clicked js button: ", count);
+        // }
+
+        // // btnEl.onclick = click;
+
+        // // btnEl.addEventListener('click', function (e) {
+        // //     console.log('click add one');
+        // // });
+        // // btnEl.addEventListener('click', function (e) {
+        // //     console.log('click add two');
+        // // });
+
+        // btnEl.addEventListener('click', click);
+
+        // const btns = document.querySelectorAll('.button');
+
+        // btns.forEach(element => {
+        //     element.addEventListener('click', function (e) {
+        //         const target = event.target;
+        //         console.log(target);
+        //     });
+        // });
+
+        // const menuEl = document.querySelector('.menu');
+
+        // const nameFunction = (e) => {
+        //     console.log(e.target, e.currentTarget);
+        // }
+
+        // menuEl.addEventListener('click', nameFunction);
+
+        // window.addEventListener('load', function (e) {
+        //     console.log("all loaded");
+        // });
+
+        // document.addEventListener('DOMContentLoaded', function (e) {
+        //     console.log('loaded');
+        // });
+
+        // btnEl.addEventListener('mouseover', function (e) {
+        //     console.log("Don't over, click it!");
+        // });
+
+        // btnEl.addEventListener('mouseleave', function (e) {
+        //     console.log("Don't leave, click it!");
+        // });
+
+        // window.addEventListener('keydown', function (e) {
+        //     console.log(e.key);
+        // });
+
+        // const linkEl = document.querySelector('.link');
+        // linkEl.addEventListener('click', function (e) {
+        //     e.preventDefault();
+        //     console.log("link to yandex");
+        // });
+
+        // document.addEventListener('copy', function (e) {
+        //     const copyText = document.getSelection().toString() + " (copied by mySite)";
+        //     console.log(copyText);
+        // });
+
+        // window.addEventListener('resize', function (e) {
+        //     console.log("resize");
+        // });
+
+        // const inputEl = document.querySelector('input');
+        // inputEl.addEventListener('input', function (e) {
+        //     console.log(e.target.value);
+        // });
+
+        const inputText = document.querySelector('.input');
+        const formRun = document.querySelector('form');
+        const errorEl = document.querySelector('.error');
+
+        formRun.addEventListener('submit', function (e) {
+            if (inputText.value === "") {
+                e.preventDefault();
+                errorEl.textContent = 'Field cannot be empty';
+            }
+        });
+    </script>
+</body>
+
+</html>
