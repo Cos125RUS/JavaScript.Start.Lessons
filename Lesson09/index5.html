@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="http://kit.fontawesome.com/a7ddde55e8.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <button>Click me!</button>
+    <script>
+        const eventOptions = { bubbles: true, cancelable: true }
+        const event = new Event('foo', eventOptions)
+        event.detail = { text: 'Произвольный текст' }
+        const customEvent = new CustomEvent('foo', {
+            ...eventOptions,
+            detail: { text: 'Произвольный текст' },
+        })
+        document.addEventListener('foo', (event) => {
+            console.log(event.detail)
+        })
+        const button = document.querySelector('button')
+        button.dispatchEvent(event)
+        button.dispatchEvent(customEvent)
+    </script>
+</body>
+
+</html>
