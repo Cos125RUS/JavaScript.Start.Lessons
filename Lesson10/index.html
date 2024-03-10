@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-box {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .product{
+            width: 250px;
+            border: 1px solid #000;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-box">
+        <!-- <div class="product">
+            <img class="product__img" src="photo.jpg" alt="photo">
+            <div class="product__content">
+                <a class="product__name" href="product.html">Product from HTML</a>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="product__price">55</p>
+            </div>
+        </div> -->
+    </div>
+
+    <script>
+        // const productData = [
+        // {
+        //     name: 'Product name obj',
+        //     price: 80
+        // },
+        // {
+        //     name: 'Product name obj 2',
+        //     price: 50
+        // }
+        // ];
+
+        // const productNameLink = document.querySelectorAll('.product__name');
+        // const productsPrice = document.querySelectorAll('.product__price');
+
+        // productNameLink[0].textContent = productData[0].name;
+        // productsPrice[0].textContent = productData[0].price;
+        // productNameLink[1].textContent = productData[1].name;
+        // productsPrice[1].textContent = productData[1].price;
+
+        const productsData = [
+            {
+                src: "img.png",
+                alt: "img obj data",
+                name: "Product name from Product Data",
+                link: "product.html",
+                desc: "Descriptions from Product Data",
+                price: 21000
+            },
+            {
+                src: "img2.png",
+                alt: "img obj data 2",
+                name: "Product name 2 from Product Data",
+                link: "product2.html",
+                desc: "Descriptions from Product Data 2",
+                price: 11000
+            },
+            {
+                src: "img3.png",
+                alt: "img obj data 3",
+                name: "Product name 3 from Product Data",
+                link: "product3.html",
+                desc: "Descriptions from Product Data 3",
+                price: 31000
+            }
+        ];
+
+        const productBox = document.querySelector('div.product-box');
+
+        productsData.forEach(productData => {
+            const productEl = document.createElement('div');
+            productEl.classList.add('product');
+
+            const productImg = document.createElement('img');
+            productImg.classList.add('product__img');
+            productImg.setAttribute('alt', productData.alt);
+            productImg.src = productData.src;
+
+            const productContent = document.createElement('div');
+            productContent.classList.add('product__content');
+
+            const productLink = document.createElement('a');
+            productLink.classList.add('product__name');
+            productLink.href = productData.link;
+            productLink.textContent = productData.name;
+
+            const productText = document.createElement('p');
+            productText.classList.add('product__text');
+            productText.textContent = productData.desc;
+
+            const productPrice = document.createElement('p');
+            productPrice.classList.add('product__price');
+            productPrice.textContent = productData.price;
+
+            productBox.appendChild(productEl);
+            productEl.appendChild(productImg);
+            productEl.appendChild(productContent);
+            productContent.appendChild(productLink);
+            productContent.appendChild(productText);
+            productContent.appendChild(productPrice);
+        });
+    </script>
+</body>
+
+</html>
